@@ -23,6 +23,10 @@ jQuery(function () {
 <!-- / Superfish Menu -->
 </head>
 <body id="top">
+	    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+    
 <div class="wrapper">
   <div id="header">
     <h1><a href="index.html">GWSE</a></h1>
@@ -54,11 +58,15 @@ jQuery(function () {
       
       <h1>Membership Application Form</h1>
         <p>
-	        <form>
-		       First Name <input name="fname" id="fname"></input><br>
-			   Surname <input name="surname" id="surname"></input><br> 
-			<br><input type="submit" value="SUBMIT Membership Application"></input>    
-	        </form>
+	       
+		       First Name <input name="fname" id="firstName"></input><br>
+			   Surname <input name="surname" id="lastName"></input><br> 
+			<br><button id="saveButton">Submit Membership Application</button>  
+	     
+	        
+	            <script src="scripts/sign-in.js"></script>
+    <script src="scripts/firestore_form.js"></script>
+	        
       </div>
       
       <div class="clear"></div>
