@@ -1,13 +1,13 @@
 // Initialize Firebase
 // your firebase info for your project should go here.
 const firebaseConfig = {
-    apiKey: "AIzaSyCEehkaC-8U5007XmitXuHdkYMiD1skqqc",
-    apiKey: "AIzaSyAAv2f43xu6x-odfXpjxXQQbvXGdG6b6P0",
-  authDomain: "gwse-79990.firebaseapp.com",
-  projectId: "gwse-79990",
-  storageBucket: "gwse-79990.appspot.com",
-  messagingSenderId: "191714628545",
-  appId: "1:191714628545:web:e521a44d0f5ea4df1b5540"
+apiKey: "AIzaSyAZ1B64gnBFIp1w3-cqx9PIaqhPqidngic",
+  authDomain: "gwse-70629.firebaseapp.com",
+  databaseURL: "https://gwse-70629-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "gwse-70629",
+  storageBucket: "gwse-70629.appspot.com",
+  messagingSenderId: "310289368537",
+  appId: "1:310289368537:web:0ca4b9db820d48768085c8"
 };
 
 firebase.initializeApp(firebaseConfig);
