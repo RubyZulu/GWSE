@@ -21,11 +21,11 @@ const lastName = document.querySelector("#lastName");
 const saveButton = document.querySelector("#saveButton");
 
 saveButton.addEventListener("click", function() {
-	alert(1)
+	
     const firstNameValue = firstName.value;
-    alert(2)
+  
     const lastNameValue = lastName.value;
-     alert(3)
+   
     docRef.set({
         firstName: firstNameValue,
         lastName: lastNameValue,
