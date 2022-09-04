@@ -18,7 +18,7 @@ saveButton.addEventListener("click", function() {
 firebase.initializeApp(firebaseConfig);
 
 const firestore = firebase.firestore();
-const docRef = firestore.doc("applications");
+const docRef = firestore.doc("applications/person");
 
 
 const firstName = document.getElementById("#firstName");
