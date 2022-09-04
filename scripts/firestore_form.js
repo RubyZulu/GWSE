@@ -26,9 +26,9 @@ const saveButton = document.querySelector("#saveButton");
 
 
 
-    const firstNameValue = firstName.value;
+    const firstNameValue = firstName.value;alert(firstNameValue);
 
-    const lastNameValue = lastName.value;
+    const lastNameValue = lastName.value;alert(lastNameValue);
     
     writeNewApp(firstNameValue,lastNameValue);
     alert("Thank you, your application has been saved");
@@ -57,7 +57,7 @@ function writeNewApp(firstname, lastname) {
 
   // Write the new post's data simultaneously in the posts list and the user's post list.
   var updates = {};
-  updates['/posts/' + newPostKey] = postData;
+  updates['/applications/' + newPostKey] = postData;
   //updates['/user-posts/' + uid + '/' + newPostKey] = postData;
 
   return firebase.database().ref().update(updates);
