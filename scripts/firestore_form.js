@@ -11,7 +11,7 @@ const firebaseConfig = {
 };
 
 const saveButton = document.querySelector("#saveButton");
-alert(saveButton);
+
 saveButton.addEventListener("click", function() {
 	alert(1);
 	
