@@ -20,15 +20,16 @@ const firestore = firebase.firestore();
 const docRef = firestore.doc("applications");
 
 
-const firstName = document.querySelector("#firstName");
-const lastName = document.querySelector("#lastName");
-const saveButton = document.querySelector("#saveButton");
+const firstName = document.getElementById("#firstName");
+const lastName = document.getElementById("#lastName");
+//const saveButton = document.querySelector("#saveButton");
+alert(firstName);
+alert(lastName);
 
 
+    const firstNameValue = firstName.value;alert(2);alert(firstNameValue);
 
-    const firstNameValue = firstName.value;alert(firstNameValue);
-
-    const lastNameValue = lastName.value;alert(lastNameValue);
+    const lastNameValue = lastName.value;alert(3);alert(lastNameValue);
     
     writeNewApp(firstNameValue,lastNameValue);
     alert("Thank you, your application has been saved");
