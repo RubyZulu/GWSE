@@ -10,7 +10,7 @@ const firebaseConfig = {
   measurementId: "G-PQ567NHR2T"
 };
 
-
+const saveButton = document.querySelector("#saveButton");
 saveButton.addEventListener("click", function() {
 	alert(1);
 	
@@ -22,7 +22,7 @@ const docRef = firestore.doc("applications");
 
 const firstName = document.getElementById("#firstName");
 const lastName = document.getElementById("#lastName");
-//const saveButton = document.querySelector("#saveButton");
+//
 alert(firstName);
 alert(lastName);
 
