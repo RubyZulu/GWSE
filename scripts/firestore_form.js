@@ -21,8 +21,8 @@ const firestore = firebase.firestore();
 const docRef = firestore.doc("applications/person");
 
 
-const firstName = document.getElementById("#firstName");
-const lastName = document.getElementById("#lastName");
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
 //
 alert(firstName);
 alert(lastName);
