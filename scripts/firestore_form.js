@@ -10,6 +10,8 @@ apiKey: "AIzaSyAZ1B64gnBFIp1w3-cqx9PIaqhPqidngic",
   appId: "1:310289368537:web:0ca4b9db820d48768085c8"
 };
 
+saveButton.addEventListener("click", function() {
+
 firebase.initializeApp(firebaseConfig);
 
 const firestore = firebase.firestore();
@@ -20,8 +22,6 @@ const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
 const saveButton = document.querySelector("#saveButton");
 
-saveButton.addEventListener("click", function() {
-	
     const firstNameValue = firstName.value;
   
     const lastNameValue = lastName.value;
