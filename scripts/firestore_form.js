@@ -55,7 +55,7 @@ function writeNewApp(firstname, lastname) {
   };
 
   // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('applications').push().key;
+  var newPostKey = firebase.database().ref().child('applications/person').push().key;
 
   // Write the new post's data simultaneously in the posts list and the user's post list.
   var updates = {};
