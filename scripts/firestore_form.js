@@ -42,19 +42,10 @@ const lastName = document.getElementById("lastName");
     const firstNameValue = firstName.value;alert(firstNameValue);
     const lastNameValue = lastName.value;alert(lastNameValue);
 	
-    db.collection("person").doc("p").set({
-    fname: firstNameValue,
-    lname: lastNameValue,
-})
-.then(() => {
-    console.log("Document successfully written!");
-})
-.catch((error) => {
-    console.error("Error writing document: ", error);
-});
     
-    //writeNewApp(firstNameValue,lastNameValue);
-    //alert("Thank you, your application has been saved");
+    
+    writeNewApp(firstNameValue,lastNameValue);
+    alert("Thank you, your application has been saved");
 
    // docRef.set({
    //     firstName: firstNameValue,
