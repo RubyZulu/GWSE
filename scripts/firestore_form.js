@@ -61,18 +61,38 @@ const lastName = document.getElementById("lastName");
 
 function writeNewApp(firstname, lastname) {
   // A post entry.
-  var postData = {
-    firstname: firstname,
-    lastname: lastname
-  };
+	var docData = {
+    stringExample: "Hello world!",
+    booleanExample: true,
+    numberExample: 3.14159265,
+    dateExample: firebase.firestore.Timestamp.fromDate(new Date("December 10, 1815")),
+    arrayExample: [5, true, "hello"],
+    nullExample: null,
+    objectExample: {
+        a: 5,
+        b: {
+            nested: "foo"
+        }
+    }
+};
+db.collection("data").doc("one").set(docData).then(() => {
+    console.log("Document successfully written!");
+});
+	return;
+	
+	
+//  var postData = {
+  //  firstname: firstname,
+ //   lastname: lastname
+ // };
 
   // Get a key for a new Post.
-  var newPostKey = firebase.db().ref().child('applications/person').push().key;
+  //var newPostKey = firebase.db().ref().child('applications/person').push().key;
 
   // Write the new post's data simultaneously in the posts list and the user's post list.
-  var updates = {};
-  updates['/applications/' + newPostKey] = postData;
+  //var updates = {};
+  //updates['/applications/' + newPostKey] = postData;
   //updates['/user-posts/' + uid + '/' + newPostKey] = postData;
 
-  return firebase.db().ref().update(updates);
+  //return firebase.db().ref().update(updates);
 }
