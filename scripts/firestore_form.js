@@ -55,8 +55,8 @@ alert(lastName);
     console.error("Error writing document: ", error);
 });
     
-    writeNewApp(firstNameValue,lastNameValue);
-    alert("Thank you, your application has been saved");
+    //writeNewApp(firstNameValue,lastNameValue);
+    //alert("Thank you, your application has been saved");
 
    // docRef.set({
    //     firstName: firstNameValue,
