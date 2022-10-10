@@ -24,7 +24,7 @@ const firebaseConfig = {
 const saveButton = document.querySelector("#saveButton");
 
 saveButton.addEventListener("click", function() {
-	alert(1);
+	
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);	
 //firebase.initializeApp(firebaseConfig);
@@ -36,13 +36,11 @@ const db = getFirestore(app);
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 //
-alert(firstName);
-alert(lastName);
 
 
-    const firstNameValue = firstName.value;alert(2);alert(firstNameValue);
 
-    const lastNameValue = lastName.value;alert(3);alert(lastNameValue);
+    const firstNameValue = firstName.value;alert(firstNameValue);
+    const lastNameValue = lastName.value;alert(lastNameValue);
 	
     db.collection("person").doc("p").set({
     fname: firstNameValue,
@@ -78,12 +76,12 @@ function writeNewApp(firstname, lastname) {
   };
 
   // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('applications/person').push().key;
+  var newPostKey = firebase.db().ref().child('applications/person').push().key;
 
   // Write the new post's data simultaneously in the posts list and the user's post list.
   var updates = {};
   updates['/applications/' + newPostKey] = postData;
   //updates['/user-posts/' + uid + '/' + newPostKey] = postData;
 
-  return firebase.database().ref().update(updates);
+  return firebase.db().ref().update(updates);
 }
