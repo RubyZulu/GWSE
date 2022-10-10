@@ -38,7 +38,7 @@ saveButton.addEventListener("click", function() {
     const addressValue = address.value;
     docRef.add({
         firstName: firstNameValue,
-        lastName: lastNameValue,
+        lastName: lastNameValue
     }).then(function() {
         console.log("Status saved!");
     }).catch(function (error) {
