@@ -37,12 +37,8 @@ saveButton.addEventListener("click", function() {
     const mobileValue = mobile.value;
     const addressValue = address.value;
     docRef.add({
-        title: titleValue,
         firstName: firstNameValue,
         lastName: lastNameValue,
-         email: emailValue,
-        mobile: mobileValue,
-        address: addressValue,
     }).then(function() {
         console.log("Status saved!");
     }).catch(function (error) {
