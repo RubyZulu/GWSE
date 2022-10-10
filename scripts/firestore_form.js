@@ -27,8 +27,8 @@ const lastName = document.querySelector("#lastName");
 const saveButton = document.querySelector("#saveButton");
 
 saveButton.addEventListener("click", function() {
-    const firstNameValue = firstName.value;
-    const lastNameValue = lastName.value;
+    const firstNameValue = firstName.value;alert(firstNameValue);
+    const lastNameValue = lastName.value;alert(lastNameValue);
     docRef.set({
         firstName: firstNameValue,
         lastName: lastNameValue,
