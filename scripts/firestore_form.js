@@ -21,17 +21,28 @@ firebase.initializeApp(firebaseConfig);
 const firestore = firebase.firestore();
 const docRef = firestore.doc("users/person");
 
-
+const title = document.querySelector("#title");
 const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
+const email = document.querySelector("#email");
+const mobile = document.querySelector("#mobile");
+const address = document.querySelector("#address");
 const saveButton = document.querySelector("#saveButton");
 
 saveButton.addEventListener("click", function() {
-    const firstNameValue = firstName.value;alert(firstNameValue);
-    const lastNameValue = lastName.value;alert(lastNameValue);
+      const titleValue = title.value;
+    const firstNameValue = firstName.value;
+    const lastNameValue = lastName.value;
+        const emailValue = email.value;
+    const mobileValue = mobile.value;
+    const addressValue = address.value;
     docRef.add({
+        title: titleValue,
         firstName: firstNameValue,
         lastName: lastNameValue,
+         email: emailValue,
+        mobile: mobileValue,
+        address: addressValue,
     }).then(function() {
         console.log("Status saved!");
     }).catch(function (error) {
