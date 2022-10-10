@@ -43,25 +43,7 @@ const lastName = document.getElementById("lastName");
     const lastNameValue = lastName.value;alert(lastNameValue);
 	
     
-    
-    writeNewApp(firstNameValue,lastNameValue);
-    alert("Thank you, your application has been saved");
-
-   // docRef.set({
-   //     firstName: firstNameValue,
-   //     lastName: lastNameValue,
-   // }).then(function() {
-   //     console.log("Status saved!");
-   // }).catch(function (error) {
-   //     console.log("Got an error: ", error);
-   // })
-});
-
-
-
-function writeNewApp(firstname, lastname) {
-  // A post entry.
-	var docData = {
+    	var docData = {
     stringExample: "Hello world!",
     booleanExample: true,
     numberExample: 3.14159265,
@@ -78,7 +60,25 @@ function writeNewApp(firstname, lastname) {
 db.collection("data").doc("one").set(docData).then(() => {
     console.log("Document successfully written!");
 });
-	return;
+    //writeNewApp(firstNameValue,lastNameValue);
+    //alert("Thank you, your application has been saved");
+
+   // docRef.set({
+   //     firstName: firstNameValue,
+   //     lastName: lastNameValue,
+   // }).then(function() {
+   //     console.log("Status saved!");
+   // }).catch(function (error) {
+   //     console.log("Got an error: ", error);
+   // })
+});
+
+
+
+//function writeNewApp(firstname, lastname) {
+  // A post entry.
+
+	//return;
 	
 	
 //  var postData = {
@@ -95,4 +95,4 @@ db.collection("data").doc("one").set(docData).then(() => {
   //updates['/user-posts/' + uid + '/' + newPostKey] = postData;
 
   //return firebase.db().ref().update(updates);
-}
+//}
