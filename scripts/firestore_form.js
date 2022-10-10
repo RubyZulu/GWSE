@@ -30,12 +30,8 @@ const address = document.querySelector("#address");
 const saveButton = document.querySelector("#saveButton");
 
 saveButton.addEventListener("click", function() {
-      const titleValue = title.value;
     const firstNameValue = firstName.value;
     const lastNameValue = lastName.value;
-        const emailValue = email.value;
-    const mobileValue = mobile.value;
-    const addressValue = address.value;
     docRef.add({
         firstName: firstNameValue,
         lastName: lastNameValue
