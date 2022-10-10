@@ -29,7 +29,7 @@ const saveButton = document.querySelector("#saveButton");
 saveButton.addEventListener("click", function() {
     const firstNameValue = firstName.value;alert(firstNameValue);
     const lastNameValue = lastName.value;alert(lastNameValue);
-    docRef.add({
+    docRef.collection("users").add({
         firstName: firstNameValue,
         lastName: lastNameValue,
     }).then(function() {
