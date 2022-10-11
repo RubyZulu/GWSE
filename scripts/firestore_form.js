@@ -19,7 +19,10 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-
+const title = document.querySelector("#title");
+const email = document.querySelector("#email");
+const mobile = document.querySelector("#telnum");
+const address = document.querySelector("#address");
 const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
 const saveButton = document.querySelector("#saveButton");
@@ -31,8 +34,8 @@ saveButton.addEventListener("click", function() {
     const lastNameValue = lastName.value;
   
   firestore.collection("users").add({
-    firstName: "Tokyo",
-    lastName: "Japan"
+    firstName: firstNameValue,
+    lastName: lastNameValue
 })
 .then((docRef) => {
     console.log("Document written with ID: ", docRef.id);
