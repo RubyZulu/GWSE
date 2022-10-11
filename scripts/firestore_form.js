@@ -33,13 +33,15 @@ saveButton.addEventListener("click", function() {
   alert("save button");
   const firstNameValue = firstName.value;
     const lastNameValue = lastName.value;
-docRef.add({
+    docRef.set({
         firstName: firstNameValue,
-        lastName: lastNameValue
+        lastName: lastNameValue,
     }).then(function() {
         console.log("Status saved!");
+        alert("Status saved!");
     }).catch(function (error) {
         console.log("Got an error: ", error);
-    });
+      alert("Got an error: ");
+    })
 
    });
