@@ -34,7 +34,7 @@ saveButton.addEventListener("click", function() {
     const lastNameValue = lastName.value;
   const titleValue = title.value;
   firestore.collection("users").add({
-    title: titleValue;
+    title: titleValue,
     firstName: firstNameValue,
     lastName: lastNameValue
 })
