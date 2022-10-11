@@ -39,5 +39,5 @@ saveButton.addEventListener("click", function() {
         console.log("Status saved!");
     }).catch(function (error) {
         console.log("Got an error: ", error);
-    })
+    });
 });
