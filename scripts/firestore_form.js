@@ -30,14 +30,4 @@ const lastName = document.querySelector("#lastName");
 const saveButton = document.querySelector("#saveButton");
 
 saveButton.addEventListener("click", function() {
-    const firstNameValue = firstName.value;
-    const lastNameValue = lastName.value;
-    docRef.add({
-        firstName: firstNameValue,
-        lastName: lastNameValue
-    }).then(function() {
-        console.log("Status saved!");
-    }).catch(function (error) {
-        console.log("Got an error: ", error);
     });
-});
