@@ -26,11 +26,11 @@ const saveButton = document.querySelector("#saveButton");
 
 saveButton.addEventListener("click", function() {
   const firestore = firebase.firestore();
-  const docRef = firestore.doc("users");
+  const docRef = firestore.doc("users/person");
     const firstNameValue = firstName.value;
     const lastNameValue = lastName.value;
   
-  firestore.collection("users/person").add({
+  firestore.collection("users").add({
     firstName: "Tokyo",
     lastName: "Japan"
 })
