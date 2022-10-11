@@ -30,4 +30,7 @@ const lastName = document.querySelector("#lastName");
 const saveButton = document.querySelector("#saveButton");
 
 saveButton.addEventListener("click", function() {
+  alert("save button");
+  const firstNameValue = firstName.value;
+    const lastNameValue = lastName.value;
     });
