@@ -26,7 +26,7 @@ const saveButton = document.querySelector("#saveButton");
 
 saveButton.addEventListener("click", function() {
   const firestore = firebase.firestore();
-  const docRef = firestore.doc("users/person");
+  const docRef = firestore.doc("users");
     const firstNameValue = firstName.value;
     const lastNameValue = lastName.value;
   
