@@ -29,7 +29,7 @@ saveButton.addEventListener("click", function() {
   const docRef = firestore.doc("users/person");
     const firstNameValue = firstName.value;
     const lastNameValue = lastName.value;
-    docRef.set({
+    docRef.add({
         firstName: firstNameValue,
         lastName: lastNameValue,
     }).then(function() {
