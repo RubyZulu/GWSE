@@ -29,14 +29,18 @@ saveButton.addEventListener("click", function() {
   const docRef = firestore.doc("users/person");
     const firstNameValue = firstName.value;
     const lastNameValue = lastName.value;
-    docRef.add({
-        firstName: firstNameValue,
-        lastName: lastNameValue,
-    }).then(function() {
-        console.log("Status saved!");
-    }).catch(function (error) {
-        console.log("Got an error: ", error);
-    })
+  
+  firestore.collection("users/person").add({
+    firstName: "Tokyo",
+    lastName: "Japan"
+})
+.then((docRef) => {
+    console.log("Document written with ID: ", docRef.id);
+})
+.catch((error) => {
+    console.error("Error adding document: ", error);
 });
+  
+ });  
 
 
