@@ -27,12 +27,35 @@ const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
 const saveButton = document.querySelector("#saveButton");
 
+const fdegree = document.querySelector("#fdegree");
+const odegrees = document.querySelector("#odegrees");
+const profquals = document.querySelector("#profquals");
+const oquals = document.querySelector("#oquals");
+const interests = document.querySelector("#interests");
+const occupation = document.querySelector("#occupation");
+const holddata = document.querySelector("#holddata");
+const sharedata = document.querySelector("#sharedata");
+
 saveButton.addEventListener("click", function() {
   const firestore = firebase.firestore();
   const docRef = firestore.doc("users/person");
-    const firstNameValue = firstName.value;
-    const lastNameValue = lastName.value;
+  
+  const firstNameValue = firstName.value;
+  const lastNameValue = lastName.value;
   const titleValue = title.value;
+  const addressValye = address.value;
+  const mobileValue = mobile.value;
+  const emailValue = email.value;
+  const fdegreeValue = fdegree.value;
+  const odegreesValue = odegrees.value;
+  const profqualsValue = profquals.value;
+  const oqualsValue = oquals.value;
+  const occupationValue = occupation.value;
+  if (holddata.checked) holddataValue="yes";
+  else holddataValue="no";
+  if (sharedata.checked) sharedataValue="yes";
+  else sharedataValue="no";
+  
   firestore.collection("users").add({
     title: titleValue,
     firstName: firstNameValue,
