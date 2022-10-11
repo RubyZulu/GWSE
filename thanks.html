@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: Realistic
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+function validateEmail() {
+
+	var myemail = $("#email").val();
+	var reexp = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	if (reexp.test(myemail) == false){
+		$('#msgEmail').html('Invalid Email Address');
+		$('#msgEmail').css("color", "red");
+		return false;
+	}
+	$('#msgEmail').html('');
+	return true;
+
+}
+function validatePhone() {
+	var reexp = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+	var telnum = $("#telnum").val();
+	if (reexp.test(telnum) == false){
+		$('#msgTel').html('Invalid Phone Number');
+		$('#msgTel').css("color", "red");
+		return false;
+	}
+	$('#msgTel').html('');
+	return true;
+}
+
+
+function validateName() {
+	var fn = $("#firstName").val();
+	var ln = $("#lastName").val();
+	ok=true;
+	
+	if (fn == "") {$('#msgFN').html('Please provide your first name');$('#msgFN').css("color", "red");ok=false;}
+	else $('#msgFN').html('');
+	
+	if (ln == "") {$('#msgLN').html('Please provide your last name');$('#msgLN').css("color", "red");ok=false;}
+	else $('#msgLN').html('');
+	return ok;
+	}
+	
+function calcFees(){
+var fees=0;
+if (document.getElementById("fullmembership").checked) {
+	fees = fees+35;
+	document.getElementById("localmembership").checked=true;
+}
+else {
+	document.getElementById("localmembership").checked=false;
+	}
+if (document.getElementById("studentmembership").checked) fees = fees+17.50;
+if (document.getElementById("pgmembership").checked) fees = fees+24.50;
+if (document.getElementById("natmembership").checked) fees = fees+30;
+if (document.getElementById("affilmembership").checked) fees = fees+15;
+if (document.getElementById("localmembership").checked) fees = fees+10;
+
+$('#fees').html(fees);
+}
+	
+$(document).ready(function(){
+	$("#checkemail").click(function(){
+    	retval1 = validateEmail();
+    	retval2 = validateName();
+    	retval3 = validatePhone();
+    	if (retval1 && retval2 && retval3) {
+	    	document.getElementById('checkemail').style.visibility = 'hidden';
+			document.getElementById('saveButton').style.visibility = 'visible';	
+	    }
+    	
+  	});
+});
+
+</script>
+	
+<title>Graduate Women Scotland East</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<!-- Superfish Menu -->
+<script type="text/javascript" src="layout/scripts/superfish/jquery.hoverIntent.js"></script>
+<script type="text/javascript" src="layout/scripts/superfish/superfish.js"></script>
+<script type="text/javascript">
+jQuery(function () {
+    jQuery('ul.nav').superfish();
+});
+</script>
+<!-- / Superfish Menu -->
+</head>
+<body id="top">
+	    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
+    
+<div class="wrapper" >
+  <div id="header" >
+    <h1><a href="index.html">GWSE</a></h1>
+    <p>
+	    
+		    Graduate Women Scotland East<br>
+<img src="logo.png" Style="margin-left: auto;  margin-right: auto;  width: 40%; border:0px;">
+	 <div style="color:black;font-size:22pt;border:0px;">Membership Application Form</div>
+    </p>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div class="container" style="border:0;">
+	  			 
+    <div class="whitebox" id="hpage_services">
+      
+      
+<h2 class="center" style="color:black;">       Thanks for your application.
+      
+      We will be in touch.</h2><p>
+      
+<h2 class="center"> Enquiries to Chair: s.j.schofield@dundee.ac.uk</h2>
+
+	     
+	        
+	          
+    <script src="scripts/firestore_form.js"></script>
+	        
+      </div>
+      
+      <div class="clear"></div>
+    </div>
+    <!-- ####################################################################################################### -->
+    <div id="hpage_latest">
+     
+      <br class="clear" />
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+
+<!-- ####################################################################################################### -->
+<div class="wrapper">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2022 - All Rights Reserved - <a href="#">GWSE</a></p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>
