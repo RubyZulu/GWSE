@@ -43,7 +43,7 @@ saveButton.addEventListener("click", function() {
   const firstNameValue = firstName.value;
   const lastNameValue = lastName.value;
   const titleValue = title.value;
-  const addressValye = address.value;
+  const addressValue = address.value;
   const mobileValue = mobile.value;
   const emailValue = email.value;
   const fdegreeValue = fdegree.value;
@@ -51,6 +51,8 @@ saveButton.addEventListener("click", function() {
   const profqualsValue = profquals.value;
   const oqualsValue = oquals.value;
   const occupationValue = occupation.value;
+  var holddataValue;
+  var sharedataValue;
   if (holddata.checked) holddataValue="yes";
   else holddataValue="no";
   if (sharedata.checked) sharedataValue="yes";
@@ -59,7 +61,17 @@ saveButton.addEventListener("click", function() {
   firestore.collection("users").add({
     title: titleValue,
     firstName: firstNameValue,
-    lastName: lastNameValue
+    lastName: lastNameValue,
+    address: addressValue,
+    mobile: mobileValue,
+    email: emailValue,
+    firstDegree: fdegreeValue,
+    otherDegrees: odegreesValue,
+    profQuals: profqualsValue,
+    otherQuals: oqualsValue,
+    occupation: occupationValue,
+    holdData: holddataValue,
+    sharedata: sharedataValue
 })
 .then((docRef) => {
     console.log("Document written with ID: ", docRef.id);
