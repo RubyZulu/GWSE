@@ -18,14 +18,15 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const firestore = firebase.firestore();
-const docRef = firestore.doc("users/person");
+
 
 const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
 const saveButton = document.querySelector("#saveButton");
 
 saveButton.addEventListener("click", function() {
+  const firestore = firebase.firestore();
+  const docRef = firestore.doc("users/person");
     const firstNameValue = firstName.value;
     const lastNameValue = lastName.value;
     docRef.set({
