@@ -67,6 +67,8 @@ saveButton.addEventListener("click", function() {
 .catch((error) => {
     console.error("Error adding document: ", error);
 });
+ 
+  window.location.href = "https://rubyzulu.github.io/GWSE/thanks.html";
   
  });  
 
