@@ -86,38 +86,26 @@ jQuery(function () {
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-firestore.js"></script>
     
-<div class="wrapper">
-  <div id="header">
+<div class="wrapper" >
+  <div id="header" >
     <h1><a href="index.html">GWSE</a></h1>
     <p>
 	    
 		    Graduate Women Scotland East<br>
-
-	
-	    
+<img src="logo.png" Style="margin-left: auto;  margin-right: auto;  width: 40%; border:0px;">
+	 <div style="color:black;font-size:22pt;border:0px;">Membership Application Form</div>
     </p>
   </div>
 </div>
 <!-- ####################################################################################################### -->
-<div class="wrapper">
-  <div id="topbar">
 
-
-    </div>
-    <br class="clear" />
-  </div>
-</div>
 <!-- ####################################################################################################### -->
 <div class="wrapper">
-  
-</div>
-<!-- ####################################################################################################### -->
-<div class="wrapper">
-  <div class="container">
-	  			 <h2>  Enquiries to Chair: s.j.schofield@dundee.ac.uk</h2>
+  <div class="container" style="border:0;">
+	  			 
     <div class="whitebox" id="hpage_services">
       
-      <h1 style="color:black;">Membership Application Form</h1>
+
         <p><table ><tr><td style="color:black;text-align: right;" width="30%">
 	    Title </td><td ><input name="title" id="title"></input></td></tr>
 		<tr style="background-color:lightGray;"><td style="color:black;text-align:right;">       First Name </td><td><input name="fname" id="firstName" style="width: 200px;"></input><div id="msgFN"></div></td></tr>
@@ -143,14 +131,16 @@ jQuery(function () {
 				<tr style="background-color:lightGray;"><td style="color:black;text-align:right;">Areas of Special Interest / Expertise: </td><td><textarea  name="interests" id="interests" rows="4" cols="60"></textarea></td></tr>		
 	
 			
-	<tr ><td style="color:black;text-align:right;">I am happy for GWSE to hold my data	</td><td><input type = "checkbox" checked></td></tr>
-	<tr style="background-color:lightGray;"><td style="color:black;text-align:right;">I am happy for GWSE to share my data with other GWSE members	</td><td><input type = "checkbox" checked></td></tr>				
+	<tr ><td style="color:black;text-align:right;">I am happy for GWSE to hold my data	</td><td><input type = "checkbox" id="holddata" checked></td></tr>
+	
+	<tr style="background-color:lightGray;"><td style="color:black;text-align:right;">I am happy for GWSE to share my data with other GWSE members	</td><td><input type = "checkbox" checked d="sharedata"></td></tr>				
 		
 		<tr ><td ></td><td> <input type="button" name="checkemail" id="checkemail" value="CHECK Entries...." style="font-size:14pt;width:400px;background-color:orange;"> </button>
 			<button id="saveButton" style="color:white;background-color:green;font-size:14pt;width:400px;visibility:hidden;">All Good.... Please Submit Membership Application Now</button> </td></tr>
 
 		
 </table>
+<h2 class="center">  Enquiries to Chair: s.j.schofield@dundee.ac.uk</h2>
 
 	     
 	        
