@@ -50,6 +50,24 @@ function validateName() {
 	return ok;
 	}
 	
+function calcFees(){
+var fees=0;
+if (document.getElementById("fullmembership").checked) {
+	fees = fees+35;
+	document.getElementById("localmembership").checked=true;
+}
+else {
+	document.getElementById("localmembership").checked=false;
+	}
+if (document.getElementById("studentmembership").checked) fees = fees+17.50;
+if (document.getElementById("pgmembership").checked) fees = fees+24.50;
+if (document.getElementById("natmembership").checked) fees = fees+30;
+if (document.getElementById("affilmembership").checked) fees = fees+15;
+if (document.getElementById("localmembership").checked) fees = fees+10;
+
+$('#fees').html(fees);
+}
+	
 $(document).ready(function(){
 	$("#checkemail").click(function(){
     	retval1 = validateEmail();
@@ -63,8 +81,6 @@ $(document).ready(function(){
   	});
 });
 
-//const js = document.querySelector('#submit');
-//        console.log(js.checked); 
 </script>
 	
 <title>Graduate Women Scotland East</title>
@@ -105,6 +121,18 @@ jQuery(function () {
 	  			 
     <div class="whitebox" id="hpage_services">
       
+      <table style="color:black;">
+	      <tr>
+	      <td><input type = "checkbox"  id="fullmembership" onchange="calcFees();"> Full Membership (£35)<br>
+		     <input type = "checkbox"  id="studentmembership" onchange="calcFees();"> Student Membership (£17.50)<br>
+			 <input type = "checkbox"  id="pgmembership" onchange="calcFees();"> PostGraduate Membership (£24.50)<br>
+			 <input type = "checkbox"  id="natmembership" onchange="calcFees();"> National Membership (£30)<br>
+			 <input type = "checkbox"  id="affilmembership" onchange="calcFees();"> Affiliate Membership (for members of GWI) (£15)<br>
+			 <input type = "checkbox"  id="localmembership" onchange="calcFees();"> Local Association Fee (£10)</td>
+	      </tr>
+	      <tr><td><h2>Annual Fees: £<div style="display:inline;" id="fees">xxx</div></h2></td></tr>
+	      </table>
+      
 
         <p><table ><tr><td style="color:black;text-align: right;" width="30%">
 	    Title </td><td ><input name="title" id="title"></input></td></tr>
@@ -133,14 +161,14 @@ jQuery(function () {
 			
 	<tr ><td style="color:black;text-align:right;">I am happy for GWSE to hold my data	</td><td><input type = "checkbox" id="holddata" checked></td></tr>
 	
-	<tr style="background-color:lightGray;"><td style="color:black;text-align:right;">I am happy for GWSE to share my data with other GWSE members	</td><td><input type = "checkbox" checked d="sharedata"></td></tr>				
+	<tr style="background-color:lightGray;"><td style="color:black;text-align:right;">I am happy for GWSE to share my data with other GWSE members	</td><td><input type = "checkbox" checked id="sharedata"></td></tr>				
 		
 		<tr ><td ></td><td> <input type="button" name="checkemail" id="checkemail" value="CHECK Entries...." style="font-size:14pt;width:400px;background-color:orange;"> </button>
 			<button id="saveButton" style="color:white;background-color:green;font-size:14pt;width:400px;visibility:hidden;">All Good.... Please Submit Membership Application Now</button> </td></tr>
 
 		
 </table>
-<h2 class="center">  Enquiries to: contact@gwseast.org</h2>
+<h2 class="center">  Enquiries to Chair: s.j.schofield@dundee.ac.uk</h2>
 
 	     
 	        
