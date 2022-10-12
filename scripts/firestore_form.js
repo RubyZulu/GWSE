@@ -76,12 +76,13 @@ saveButton.addEventListener("click", function() {
 })
 .then((docRef) => {
     console.log("Document written with ID: ", docRef.id);
+     window.location.href = "https://rubyzulu.github.io/GWSE/thanks.html";
 })
 .catch((error) => {
     console.error("Error adding document: ", error);
 });
  
-  window.location.href = "https://rubyzulu.github.io/GWSE/thanks.html";
+ 
   
  });  
 
