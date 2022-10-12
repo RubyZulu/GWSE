@@ -26,6 +26,7 @@ const address = document.querySelector("#address");
 const firstName = document.querySelector("#firstName");
 const lastName = document.querySelector("#lastName");
 const saveButton = document.querySelector("#saveButton");
+alert(saveButton);
 
 const fdegree = document.querySelector("#fdegree");
 const odegrees = document.querySelector("#odegrees");
